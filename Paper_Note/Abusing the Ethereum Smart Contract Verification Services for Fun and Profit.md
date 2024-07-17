@@ -13,8 +13,33 @@
 ## 核心部分
 ### 攻击模型
 1. 敌对验证（A1）
+   
    利用验证器的漏洞，构造虚假的合约源码，在其他人部署合约字节码完成验证
 2. 源欺骗（A2）
+   
    攻击者也为合约部署者，但是故意提供虚假的源码完成验证
    
-### 
+### 验证架构
+1. 不可信源码数据采集模块（M1）
+   
+   源代码文件（有可能有多个文件，Solidity编译器solc允许多个源码文件和路径打包进一个JSON文件），配置项，一个地址
+2. 链上数据采集模块（M2）
+   
+   根据M1中的地址，获取Runtime Code或Bytecode（Bytecode包括Runtime Code和Constructor Code）
+3. 编译模块（M3）
+
+   根据M1的配置项编译M1的源码文件，得到字节码。但是编译形成的Runtime code和链上的Runtime code有一些区别，有一些参数需要实际链上信息才能确定
+
+   因此有两个方案解决这个问题：
+   - 1）记住所有编译形成的Runtime code中immutable variables的偏移量，并将其视为空白；将链上Runtime code对应偏移量的内容填进空白，直接确保二者immutable variables一致，但这不能做到完全验证的功能
+   - 2）获取当时链上信息模拟执行Bytecode
+4. 比对模块（M4）
+
+   比对时一般要删除metadata，Blockscout采用一种方法，更改影响metadata的配置项信息，保持运行逻辑不变，通过观察bytecode中变化的部分来识别metadata
+5. 数据存储模块（M5）
+
+   完成比对后存储数据
+6. 展示&API模块（M6）
+
+   用户请求时响应
+
