@@ -7,5 +7,5 @@ The hyperlink for the paper title points to the official conference website, and
 |:--|:--:|:--:|:--:|:--:|:--:|:--:|
 |1|[Abusing the Ethereum Smart Contract Verification Services for Fun and Profit](https://www.ndss-symposium.org/ndss-paper/abusing-the-ethereum-smart-contract-verification-services-for-fun-and-profit/)|NDSS|2023|[√](https://arxiv.org/abs/2307.00549)|[√](https://github.com/source-code-scam-paper/source-scam-all-in-one)|The first paper on the security of smart contract verification.|
 |2|[Smarter Contracts: Detecting Vulnerabilities in Smart Contracts with Deep Transfer Learning](https://www.ndss-symposium.org/ndss-paper/smarter-contracts-detecting-vulnerabilities-in-smart-contracts-with-deep-transfer-learning/)|NDSS|2023|[√](https://arxiv.org/abs/2106.09282)|[√](https://github.com/sss-wue/smarter-contracts)|Using DNN + Transfer Learning to detect traditional smart contract vulnerabilities.|
-|3|[Unveiling the Risks of NFT Promotion Scams](https://ojs.aaai.org/index.php/ICWSM/article/view/31395#:~:text=We%20also%20identify%20several%20shortcomings%20in)|AAAI|2024|[√](http://export.arxiv.org/abs/2301.09806v3)||
+
 
