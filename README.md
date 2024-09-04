@@ -1,5 +1,5 @@
 # Smart Contract Security Papers
-Collecting papers on smart contract security from top security conferences in recent years.
+Collecting papers on smart contract security from top conferences/journals in recent years.
 The hyperlink for the paper title points to the official conference website, and the arXiv hyperlink points to the arXiv preprint version of the paper.
 
 ## Network and Distributed System Security Symposium(NDSS)
